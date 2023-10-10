@@ -68,30 +68,6 @@ func (r *TenantReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctr
 		return ctrl.Result{}, err
 	}
 
-	// echoService := &corev1.Service{
-	// 	ObjectMeta: metav1.ObjectMeta{
-	// 		Name:      tenant.Spec.Name + "-echo",
-	// 		Namespace: req.Namespace,
-	// 	},
-	// 	// ... Fill out service spec here
-	// }
-
-	// if err := ctrl.SetControllerReference(tenant, echoService, r.Scheme); err != nil {
-	// 	return ctrl.Result{}, err
-	// }
-
-	// found := &corev1.Service{}
-	// err = r.Get(ctx, types.NamespacedName{Name: echoService.Name, Namespace: echoService.Namespace}, found)
-	// if err != nil && errors.IsNotFound(err) {
-	// 	err = r.Create(ctx, echoService)
-	// 	if err != nil {
-	// 		return ctrl.Result{}, err
-	// 	}
-	// }
-	// // TODO(nickpoorman): Handle updates, deletes, and other logic here
-
-	// return ctrl.Result{}, nil
-
 	// Check if deployment exists, if not create it
 	deploymentName := tenant.Spec.Name + "-echo-deployment"
 	deployment := &apps.Deployment{}
