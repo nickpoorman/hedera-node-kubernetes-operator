@@ -297,6 +297,4 @@ client-gen-install:
 .PHONY: generate-client
 generate-client: client-gen-install
 	$(CLIENT_GEN) --clientset-name versioned --input-base $(MODULE)/api --input $(CLIENT_GEN_PATHS) --output-package $(MODULE)/client/clientset -v=5
-
-print-client-gen-version:
-	@echo $(CLIENT_GEN_VERSION)
+	mv $(GOPATH)/src/$(MODULE)/client ./client
