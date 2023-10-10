@@ -8,8 +8,8 @@ layout:
 plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
-projectName: hedera-node-kubernetes-operator
-repo: github.com/nickpoorman/hedera-node-kubernetes-operator
+projectName: hoper
+repo: github.com/nickpoorman/hoper
 resources:
 - api:
     crdVersion: v1
@@ -18,6 +18,6 @@ resources:
   domain: nickpoorman.com
   group: app
   kind: Tenant
-  path: github.com/nickpoorman/hedera-node-kubernetes-operator/api/v1alpha1
+  path: github.com/nickpoorman/hoper/api/v1alpha1
   version: v1alpha1
 version: "3"

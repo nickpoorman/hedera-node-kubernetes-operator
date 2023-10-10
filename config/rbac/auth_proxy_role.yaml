@@ -5,8 +5,8 @@ metadata:
     app.kubernetes.io/name: clusterrole
     app.kubernetes.io/instance: proxy-role
     app.kubernetes.io/component: kube-rbac-proxy
-    app.kubernetes.io/created-by: hedera-node-kubernetes-operator
-    app.kubernetes.io/part-of: hedera-node-kubernetes-operator
+    app.kubernetes.io/created-by: hoper
+    app.kubernetes.io/part-of: hoper
     app.kubernetes.io/managed-by: kustomize
   name: proxy-role
 rules:

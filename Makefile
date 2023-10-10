@@ -28,8 +28,8 @@ BUNDLE_METADATA_OPTS ?= $(BUNDLE_CHANNELS) $(BUNDLE_DEFAULT_CHANNEL)
 # This variable is used to construct full image tags for bundle and catalog images.
 #
 # For example, running 'make bundle-build bundle-push catalog-build catalog-push' will build and push both
-# nickpoorman.com/hedera-node-kubernetes-operator-bundle:$VERSION and nickpoorman.com/hedera-node-kubernetes-operator-catalog:$VERSION.
-IMAGE_TAG_BASE ?= nickpoorman.com/hedera-node-kubernetes-operator
+# nickpoorman.com/hoper-bundle:$VERSION and nickpoorman.com/hoper-catalog:$VERSION.
+IMAGE_TAG_BASE ?= nickpoorman.com/hoper
 
 # BUNDLE_IMG defines the image:tag used for the bundle.
 # You can use it as an arg. (E.g make bundle-build BUNDLE_IMG=<some-registry>/<project-name-bundle>:<tag>)
@@ -296,5 +296,5 @@ client-gen-install:
 
 .PHONY: generate-client
 generate-client: client-gen-install
-	$(CLIENT_GEN) --clientset-name versioned --input-base $(MODULE)/api --input $(CLIENT_GEN_PATHS) --output-package $(MODULE)/client/clientset -v=5
-	mv $(GOPATH)/src/$(MODULE)/client ./client
+	$(CLIENT_GEN) --clientset-name versioned --input-base $(MODULE)/api --input $(CLIENT_GEN_PATHS) --output-package $(MODULE)/client/clientset
+	mv $(GOPATH)/src/$(MODULE)/client ./

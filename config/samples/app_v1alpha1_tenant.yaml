@@ -4,9 +4,9 @@ metadata:
   labels:
     app.kubernetes.io/name: tenant
     app.kubernetes.io/instance: tenant-sample
-    app.kubernetes.io/part-of: hedera-node-kubernetes-operator
+    app.kubernetes.io/part-of: hoper
     app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: hedera-node-kubernetes-operator
+    app.kubernetes.io/created-by: hoper
   name: tenant-sample
 spec:
   # TODO(user): Add fields here

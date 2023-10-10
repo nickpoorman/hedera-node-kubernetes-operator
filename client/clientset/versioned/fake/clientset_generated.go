@@ -19,9 +19,9 @@ limitations under the License.
 package fake
 
 import (
-	clientset "github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned"
-	v1alpha1internalversion "github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned/typed/v1alpha1/internalversion"
-	fakev1alpha1internalversion "github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned/typed/v1alpha1/internalversion/fake"
+	clientset "github.com/nickpoorman/hoper/client/clientset/versioned"
+	v1alpha1internalversion "github.com/nickpoorman/hoper/client/clientset/versioned/typed/v1alpha1/internalversion"
+	fakev1alpha1internalversion "github.com/nickpoorman/hoper/client/clientset/versioned/typed/v1alpha1/internalversion/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

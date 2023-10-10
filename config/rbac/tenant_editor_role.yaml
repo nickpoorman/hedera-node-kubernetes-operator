@@ -6,8 +6,8 @@ metadata:
     app.kubernetes.io/name: clusterrole
     app.kubernetes.io/instance: tenant-editor-role
     app.kubernetes.io/component: rbac
-    app.kubernetes.io/created-by: hedera-node-kubernetes-operator
-    app.kubernetes.io/part-of: hedera-node-kubernetes-operator
+    app.kubernetes.io/created-by: hoper
+    app.kubernetes.io/part-of: hoper
     app.kubernetes.io/managed-by: kustomize
   name: tenant-editor-role
 rules:

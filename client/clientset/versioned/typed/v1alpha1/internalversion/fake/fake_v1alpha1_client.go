@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	internalversion "github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned/typed/v1alpha1/internalversion"
+	internalversion "github.com/nickpoorman/hoper/client/clientset/versioned/typed/v1alpha1/internalversion"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )

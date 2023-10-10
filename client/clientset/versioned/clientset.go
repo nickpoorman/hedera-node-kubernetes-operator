@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"net/http"
 
-	v1alpha1internalversion "github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned/typed/v1alpha1/internalversion"
+	v1alpha1internalversion "github.com/nickpoorman/hoper/client/clientset/versioned/typed/v1alpha1/internalversion"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

@@ -29,7 +29,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	appv1alpha1 "github.com/nickpoorman/hedera-node-kubernetes-operator/api/v1alpha1"
+	appv1alpha1 "github.com/nickpoorman/hoper/api/v1alpha1"
 )
 
 const httpEchoImage = "hashicorp/http-echo"
@@ -40,9 +40,9 @@ type TenantReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=github.com/nickpoorman/hedera-node-kubernetes-operator/app,resources=tenants,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=github.com/nickpoorman/hedera-node-kubernetes-operator/app,resources=tenants/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=github.com/nickpoorman/hedera-node-kubernetes-operator/app,resources=tenants/finalizers,verbs=update
+//+kubebuilder:rbac:groups=github.com/nickpoorman/hoper/app,resources=tenants,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=github.com/nickpoorman/hoper/app,resources=tenants/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=github.com/nickpoorman/hoper/app,resources=tenants/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.

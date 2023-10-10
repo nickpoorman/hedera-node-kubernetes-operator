@@ -5,8 +5,8 @@ import (
 	"flag"
 	"path/filepath"
 
-	appv1alpha1 "github.com/nickpoorman/hedera-node-kubernetes-operator/api/v1alpha1"
-	"github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned"
+	appv1alpha1 "github.com/nickpoorman/hoper/api/v1alpha1"
+	"github.com/nickpoorman/hoper/client/clientset/versioned"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/client-go/util/homedir"

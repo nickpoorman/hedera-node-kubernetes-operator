@@ -21,7 +21,7 @@ package internalversion
 import (
 	"net/http"
 
-	"github.com/nickpoorman/hedera-node-kubernetes-operator/client/clientset/versioned/scheme"
+	"github.com/nickpoorman/hoper/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

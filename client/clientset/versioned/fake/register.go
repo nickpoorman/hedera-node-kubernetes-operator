@@ -19,7 +19,7 @@ limitations under the License.
 package fake
 
 import (
-	v1alpha1internalversion "github.com/nickpoorman/hedera-node-kubernetes-operator/api/v1alpha1"
+	v1alpha1internalversion "github.com/nickpoorman/hoper/api/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
