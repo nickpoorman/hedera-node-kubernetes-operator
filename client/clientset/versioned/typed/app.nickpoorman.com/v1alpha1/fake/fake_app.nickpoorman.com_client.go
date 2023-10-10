@@ -19,22 +19,22 @@ limitations under the License.
 package fake
 
 import (
-	internalversion "github.com/nickpoorman/hoper/client/clientset/versioned/typed/v1alpha1/internalversion"
+	v1alpha1 "github.com/nickpoorman/hoper/client/clientset/versioned/typed/app.nickpoorman.com/v1alpha1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
 )
 
-type FakeV1alpha1 struct {
+type FakeAppV1alpha1 struct {
 	*testing.Fake
 }
 
-func (c *FakeV1alpha1) Tenants(namespace string) internalversion.TenantInterface {
+func (c *FakeAppV1alpha1) Tenants(namespace string) v1alpha1.TenantInterface {
 	return &FakeTenants{c, namespace}
 }
 
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
-func (c *FakeV1alpha1) RESTClient() rest.Interface {
+func (c *FakeAppV1alpha1) RESTClient() rest.Interface {
 	var ret *rest.RESTClient
 	return ret
 }

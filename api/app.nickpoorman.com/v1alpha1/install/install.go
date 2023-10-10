@@ -1,7 +1,7 @@
 package install
 
 import (
-	v1alpha1 "github.com/nickpoorman/hoper/api/v1alpha1"
+	v1alpha1 "github.com/nickpoorman/hoper/api/app.nickpoorman.com/v1alpha1"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 

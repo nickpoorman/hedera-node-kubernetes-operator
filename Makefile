@@ -284,7 +284,7 @@ catalog-push: ## Push a catalog image.
 # client-gen variables
 CLIENT_GEN ?= $(GOBIN)/client-gen
 CLIENT_GEN_VERSION := $(shell awk -F' ' '/k8s.io\/client-go/ {print $$2}' go.mod) # v0.26.0 # Make sure this version matches your Kubernetes dependencies version
-CLIENT_GEN_PATHS = v1alpha1 
+CLIENT_GEN_PATHS = app.nickpoorman.com/v1alpha1
 MODULE := $(shell grep '^module ' go.mod | cut -d ' ' -f2)
 
 .PHONY: client-gen-install
@@ -296,5 +296,6 @@ client-gen-install:
 
 .PHONY: generate-client
 generate-client: client-gen-install
-	$(CLIENT_GEN) --clientset-name versioned --input-base $(MODULE)/api --input $(CLIENT_GEN_PATHS) --output-package $(MODULE)/client/clientset
+	rm -rf ./client
+	$(CLIENT_GEN) --clientset-name versioned --input-base $(MODULE)/api --input $(CLIENT_GEN_PATHS) --output-package $(MODULE)/client/clientset -v=5
 	mv $(GOPATH)/src/$(MODULE)/client ./

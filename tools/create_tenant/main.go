@@ -5,7 +5,7 @@ import (
 	"flag"
 	"path/filepath"
 
-	appv1alpha1 "github.com/nickpoorman/hoper/api/v1alpha1"
+	appv1alpha1 "github.com/nickpoorman/hoper/api/app.nickpoorman.com/v1alpha1"
 	"github.com/nickpoorman/hoper/client/clientset/versioned"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/tools/clientcmd"
@@ -51,10 +51,14 @@ func main() {
 		Spec: appv1alpha1.TenantSpec{
 			Name: tenantName,
 		},
+		Status: appv1alpha1.TenantStatus{
+			InstanceCreated: false,
+			Conditions:      []metav1.Condition{},
+		},
 	}
 
 	// Use the clientset to create the Tenant CR
-	_, err = clientset.V1alpha1().Tenants("default").Create(context.TODO(), tenant, metav1.CreateOptions{})
+	_, err = clientset.AppV1alpha1().Tenants("default").Create(context.TODO(), tenant, metav1.CreateOptions{})
 	if err != nil {
 		panic(err.Error())
 	}

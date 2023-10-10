@@ -30,7 +30,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	appv1alpha1 "github.com/nickpoorman/hoper/api/v1alpha1"
+	appv1alpha1 "github.com/nickpoorman/hoper/api/app.nickpoorman.com/v1alpha1"
 	//+kubebuilder:scaffold:imports
 )
 

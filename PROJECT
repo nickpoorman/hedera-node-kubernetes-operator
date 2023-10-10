@@ -18,6 +18,6 @@ resources:
   domain: nickpoorman.com
   group: app
   kind: Tenant
-  path: github.com/nickpoorman/hoper/api/v1alpha1
+  path: github.com/nickpoorman/hoper/api/app.nickpoorman.com/v1alpha1
   version: v1alpha1
 version: "3"
